@@ -6,8 +6,33 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
-    image: centos:7
+  - name: molecule-swarm-1
+    image: solita/ubuntu-systemd
+    privileged: True
+    required: 'True'
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    command: /lib/systemd/systemd
+    groups:
+      - docker_swarm_manager
+  - name: molecule-swarm-2
+    image: solita/ubuntu-systemd
+    privileged: True
+    required: 'True'
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    command: /lib/systemd/systemd
+    groups:
+      - docker_swarm_worker
+  - name: molecule-swarm-3
+    image: solita/ubuntu-systemd
+    privileged: True
+    required: 'True'
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    command: /lib/systemd/systemd
+    groups:
+      - docker_swarm_worker
 provisioner:
   name: ansible
   lint:
