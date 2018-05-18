@@ -7,7 +7,7 @@ lint:
   name: yamllint
 platforms:
   - name: molecule-swarm-1
-    image: solita/ubuntu-systemd
+    image: asg1612/docker-systemd
     privileged: True
     required: 'True'
     volumes:
@@ -16,7 +16,7 @@ platforms:
     groups:
       - docker_swarm_manager
   - name: molecule-swarm-2
-    image: solita/ubuntu-systemd
+    image: asg1612/docker-systemd
     privileged: True
     required: 'True'
     volumes:
@@ -25,7 +25,7 @@ platforms:
     groups:
       - docker_swarm_worker
   - name: molecule-swarm-3
-    image: solita/ubuntu-systemd
+    image: asg1612/docker-systemd
     privileged: True
     required: 'True'
     volumes:

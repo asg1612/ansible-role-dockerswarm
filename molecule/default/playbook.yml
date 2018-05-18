@@ -1,10 +1,6 @@
 ---
 - name: Converge
   hosts: all
-  vars:
-    docker_swarm_interface: "{{ ansible_default_ipv4['interface'] }}"
-    docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_swarm_interface]['ipv4']['address'] }}"
-    docker_swarm_port: 2377
   roles:
     - role: asg1612.docker
     - role: ansible-role-dockerswarm

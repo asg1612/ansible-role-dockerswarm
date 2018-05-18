@@ -1,7 +1,8 @@
-Role Name
+ansible-role-dockerswarm
 =========
 
-A brief description of the role goes here.
+Role based on:
+https://github.com/atosatto/ansible-dockerswarm
 
 Requirements
 ------------
@@ -46,4 +47,3 @@ Author Information
 
 An optional section for the role authors to include contact information, or a
 website (HTML is not allowed).
-# ansible-role-dockerswarm

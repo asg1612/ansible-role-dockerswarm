@@ -1,2 +1,5 @@
 ---
 # defaults file for ansible-role-dockerswarm
+docker_swarm_interface: "{{ hostvars[inventory_hostname]['ansible_default_ipv4']['interface'] }}"
+docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}"
+docker_swarm_port: 2377
