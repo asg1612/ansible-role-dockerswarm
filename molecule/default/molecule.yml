@@ -8,7 +8,7 @@ lint:
 platforms:
   - name: molecule-swarm-1
     image: asg1612/docker-systemd
-    privileged: True
+    privileged: true
     required: 'True'
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
@@ -17,7 +17,7 @@ platforms:
       - docker_swarm_manager
   - name: molecule-swarm-2
     image: asg1612/docker-systemd
-    privileged: True
+    privileged: true
     required: 'True'
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
@@ -26,7 +26,7 @@ platforms:
       - docker_swarm_worker
   - name: molecule-swarm-3
     image: asg1612/docker-systemd
-    privileged: True
+    privileged: true
     required: 'True'
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
