@@ -18,7 +18,7 @@ install:
   - pip install -r test-requirements.txt
 
 script:
-  - molecule --debug test --driver-name docker
+  - molecule test --driver-name docker
 
 
 notifications:
