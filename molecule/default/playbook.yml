@@ -1,6 +1,8 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    docker_version: 18.03.*
   roles:
     - role: asg1612.docker
     - role: ansible-role-dockerswarm
