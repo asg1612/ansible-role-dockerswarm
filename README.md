@@ -38,7 +38,7 @@ passed in as parameters) is always nice for users too:
 License
 -------
 
-BSD
+[GNU General Public License v 3.0](https://www.gnu.org/licenses/gpl-3.0)
 
 Author Information
 ------------------
